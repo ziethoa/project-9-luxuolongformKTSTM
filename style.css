@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-1: "Noto Serif", serif;
+    --font-2: "Inter", sans-serif;
+}
+
+body {
+    background-color: rgba(255, 248, 246, 1);
+    overflow-x: hidden;
+}
+
+.body-text {
+    font-family: var(--font-1);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: justify;
+    color: #000;
+}
+
+.questions {
+    font-family: var(--font-2);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 27px;
+    text-align: justify;
+    color: #000;
+}
+
+img {
+    width: 100%;
+}
+
+/* ----------main--------- */
+.main {
+    width: 100%;
+}
+
+.sc-1 {
+    width: 100%;
+    position: relative;
+    padding: 10px 10px 0 10px;
+}
+
+.imgbg-1 {
+    width: 35%;
+    position: absolute;
+    top: 25.6%;
+    left: 15%;
+    animation: slideDownAndFade 2s ease-in-out forwards;
+}
+
+@keyframes slideDownAndFade {
+    0% {
+        transform: translateY(-15%);
+        /* Bắt đầu từ trên cùng (ngoài viewport) */
+        opacity: 1;
+        /* Hiển thị hoàn toàn */
+    }
+
+    50% {
+        transform: translateY(0);
+        /* Trượt xuống vị trí ban đầu */
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0);
+        /* Giữ vị trí */
+        opacity: 0;
+        /* Mờ dần và biến mất */
+    }
+}
+
+.imgbg-2 {
+    width: 27.3%;
+    position: absolute;
+    bottom: 15.5%;
+    right: 13.7%;
+
+}
+
+.imgbg-3 {
+    width: 27.3%;
+    position: absolute;
+    bottom: 8%;
+    left: 31.8%;
+
+}
+
+@keyframes slideLeftAndFade {
+    0% {
+        transform: translateX(10%);
+        /* Bắt đầu từ bên phải, cách 20% */
+        opacity: 1;
+        /* Hiển thị hoàn toàn */
+    }
+
+    50% {
+        transform: translateX(0);
+        /* Trượt về vị trí ban đầu */
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0);
+        /* Giữ vị trí */
+        opacity: 0;
+        /* Mờ dần và biến mất */
+    }
+}
+
+.sc-2 {
+    width: 100%;
+    padding-top: 2%;
+}
+
+.sc-2 p {
+    width: 100%;
+    max-width: 720px;
+    margin: 2% auto 0;
+}
+
+.sc-3 {
+    width: 100%;
+    max-width: 720px;
+    padding-top: 2%;
+    margin: 2% auto 0;
+    position: relative;
+}
+
+.sc-3-2{
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.quote-2a, .quote-2b{
+    width: 50%;
+}
+
+.bg-quote-1 {
+    position: absolute;
+    left: 9.8%;
+    top: 8.8%;
+    width: 30.5%;
+    object-fit: fill;
+}
+
+.bg-quote-1-2 {
+    position: absolute;
+    right: 8.1%;
+    bottom: 24.9%;
+    width: 58.5%;
+    object-fit: fill;
+}
+
+.bg-quote-2 {
+    position: absolute;
+    left: 0;
+    bottom: 3.5%;
+    width: 100%;
+    object-fit: fill;
+}
+
+.bg-quote-3 {
+    position: absolute;
+    right: 9.7%;
+    top: 30.2%;
+    width: 30.5%;
+    object-fit: fill;
+}
+
+.bg-quote-4 {
+    position: absolute;
+    left: 9.6%;
+    bottom: 13.7%;
+    width: 30.6%;
+    object-fit: fill;
+}
+
+.questions,
+.body-text,
+.quote,
+.imgbg-1,
+.imgbg-2,
+.imgbg-3,
+.footer-img,
+.img-open,
+.bg-quote-1,
+.bg-quote-1-2,
+.bg-quote-2,
+.bg-quote-3,
+.bg-quote-4 {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: opacity, transform;
+}
+
+.questions.visible,
+.body-text.visible,
+.quote.visible,
+.imgbg-1.visible,
+.imgbg-2.visible,
+.imgbg-3.visible,
+.footer-img.visible,
+.img-open.visible,
+.bg-quote-1.visible,
+.bg-quote-1-2.visible,
+.bg-quote-2.visible,
+.bg-quote-3.visible,
+.bg-quote-4.visible {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.imgbg-2.visible,
+.imgbg-3.visible,
+.bg-quote-1.visible,
+.bg-quote-1-2.visible,
+.bg-quote-2.visible,
+.bg-quote-3.visible,
+.bg-quote-4.visible {
+    animation: slideLeftAndFade 1.5s ease-in-out forwards;
+}
+
+/* responsive */
+/* @media screen and (max-width: 990px) {
+    
+    .sc-2 p {
+        width: 80%;
+    }
+
+    .sc-3 {
+        width: 80%;
+    }
+
+    .bg-quote-1, .bg-quote-3 {
+        top: 5%;
+    }
+} */
+
+@media screen and (max-width: 767px) {
+
+
+    .sc-2 p {
+        width: 100%;
+        padding: 0 15px;
+        margin: 4% auto 0;
+        text-align: justify;
+    }
+
+    .sc-3 {
+        width: 100%;
+        margin: 6% auto 0;
+    }
+
+
+}
+
+@media screen and (max-width: 450px) {
+
+
+    .quote-2a, .quote-2b{
+        width: 100%;
+    }
+
+    .quote-2a{
+        padding-right: 20px;
+    }
+
+    .quote-2b{
+        padding-left: 20px;
+    }
+
+}
