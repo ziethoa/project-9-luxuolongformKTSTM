@@ -12,7 +12,7 @@
 }
 
 body {
-    background-color: rgba(255, 248, 246, 1);
+    background-color: #F0F0E6;
     overflow-x: hidden;
 }
 
@@ -46,7 +46,6 @@ img {
 .sc-1 {
     width: 100%;
     position: relative;
-    padding: 10px 10px 0 10px;
 }
 
 .imgbg-1 {
@@ -146,46 +145,6 @@ img {
     width: 50%;
 }
 
-.bg-quote-1 {
-    position: absolute;
-    left: 9.8%;
-    top: 8.8%;
-    width: 30.5%;
-    object-fit: fill;
-}
-
-.bg-quote-1-2 {
-    position: absolute;
-    right: 8.1%;
-    bottom: 24.9%;
-    width: 58.5%;
-    object-fit: fill;
-}
-
-.bg-quote-2 {
-    position: absolute;
-    left: 0;
-    bottom: 3.5%;
-    width: 100%;
-    object-fit: fill;
-}
-
-.bg-quote-3 {
-    position: absolute;
-    right: 9.7%;
-    top: 30.2%;
-    width: 30.5%;
-    object-fit: fill;
-}
-
-.bg-quote-4 {
-    position: absolute;
-    left: 9.6%;
-    bottom: 13.7%;
-    width: 30.6%;
-    object-fit: fill;
-}
-
 .questions,
 .body-text,
 .quote,
@@ -193,12 +152,7 @@ img {
 .imgbg-2,
 .imgbg-3,
 .footer-img,
-.img-open,
-.bg-quote-1,
-.bg-quote-1-2,
-.bg-quote-2,
-.bg-quote-3,
-.bg-quote-4 {
+.img-open{
     opacity: 0;
     transform: translateX(-50px);
     transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
@@ -212,23 +166,14 @@ img {
 .imgbg-2.visible,
 .imgbg-3.visible,
 .footer-img.visible,
-.img-open.visible,
-.bg-quote-1.visible,
-.bg-quote-1-2.visible,
-.bg-quote-2.visible,
-.bg-quote-3.visible,
-.bg-quote-4.visible {
+.img-open.visible
+{
     opacity: 1;
     transform: translateX(0px);
 }
 
 .imgbg-2.visible,
-.imgbg-3.visible,
-.bg-quote-1.visible,
-.bg-quote-1-2.visible,
-.bg-quote-2.visible,
-.bg-quote-3.visible,
-.bg-quote-4.visible {
+.imgbg-3.visible{
     animation: slideLeftAndFade 1.5s ease-in-out forwards;
 }
 
@@ -271,14 +216,6 @@ img {
 
     .quote-2a, .quote-2b{
         width: 100%;
-    }
-
-    .quote-2a{
-        padding-right: 20px;
-    }
-
-    .quote-2b{
-        padding-left: 20px;
     }
 
 }

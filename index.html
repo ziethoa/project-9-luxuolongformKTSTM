@@ -12,9 +12,6 @@
     <div class="main">
         <section class="sc-1">
             <img src="assets/LUXUOLONGFORM-TrungMai-1Open.png" alt="" class="img-open">
-            <img src="assets/sc-1-1.png" alt="" class="imgbg-1">
-            <img src="assets/sc-1-2.png" alt="" class="imgbg-2">
-            <img src="assets/sc-1-3.png" alt="" class="imgbg-3">
         </section>
         <section class="sc-2">
             <p class="body-text">
@@ -58,8 +55,6 @@
         </section>
         <section class="sc-3 sc-3-1">
             <img src="assets/LUXUOLONGFORM-TrungMai-3Quote.png" alt="" class="quote quote-1">
-            <img src="assets/quote-bg-1-1.png" alt="" class="bg-quote bg-quote-1">
-            <img src="assets/quote-bg-1-2.png" alt="" class="bg-quote bg-quote-1-2">
         </section>
         <section class="sc-2">
             <p class="questions">
@@ -114,9 +109,6 @@
         <section class="sc-3 sc-3-2">
             <img src="assets/LUXUOLONGFORM-TrungMai-2aQuote.png" alt="" class="quote quote-2a">
             <img src="assets/LUXUOLONGFORM-TrungMai-2bQuote.png" alt="" class="quote quote-2b">
-            <!-- <img src="assets/quote-bg-2-1.png" alt="" class="bg-quote bg-quote-2">
-            <img src="assets/quote-bg-2-2.png" alt="" class="bg-quote bg-quote-2-2">
-            <img src="assets/quote-bg-2-3.png" alt="" class="bg-quote bg-quote-2-3"> -->
         </section>
         <section class="sc-2">
             <p class="questions">
@@ -170,8 +162,6 @@
         </section>
         <section class="sc-3 sc-3-3">
             <img src="assets/LUXUOLONGFORM-TrungMai-4Quote.png" alt="" class="quote quote-3">
-            <img src="assets/quote-bg-3-1.png" alt="" class="bg-quote bg-quote-3">
-            <!-- <img src="assets/quote-bg-3-2.png" alt="" class="bg-quote bg-quote-3-2"> -->
         </section>
         <section class="sc-2">
             <p class="questions">
@@ -227,7 +217,6 @@
         </section>
         <section class="sc-3">
             <img src="assets/LUXUOLONGFORM-TrungMai-5Quote.png" alt="" class="quote quote-4">
-            <img src="assets/quote-bg-4-2.png" alt="" class="bg-quote bg-quote-4">
         </section>
         <section class="sc-3">
             <img src="assets/LUXUOLONGFORM-TrungMai-6Credit.png" alt="" class="footer-img">
@@ -244,7 +233,7 @@
     </script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const slideElements = document.querySelectorAll('.questions, .body-text, .quote, .imgbg-1, .imgbg-2, .imgbg-3, .footer-img, .img-open, .bg-quote-1, .bg-quote-1-2, .bg-quote-2, .bg-quote-3, .bg-quote-4');
+            const slideElements = document.querySelectorAll('.questions, .body-text, .quote, .footer-img, .img-open');
             const slideObserver = new IntersectionObserver((entries) => {
                 entries.forEach((entry, index) => {
                     if (entry.isIntersecting) {
